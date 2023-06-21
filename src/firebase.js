@@ -1,6 +1,6 @@
 import { getDatabase, ref as Reference , onValue} from "firebase/database";
 import { initializeApp } from "firebase/app";
-await initializeApp( {
+initializeApp( {
     apiKey           : "AIzaSyBFze76GCC9-MfNll_4_twwA04R_mWKKYk"  ,
     authDomain       : "test-d010f.firebaseapp.com"               ,
     projectId        : "test-d010f"                               ,

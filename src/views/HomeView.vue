@@ -2,26 +2,106 @@
     import { ref , onMounted } from "vue"
     import { Database , Reference , onValue } from '../firebase.js'
     const home = ref( {
-        app_infos: {
-            background : "https://placehold.co/600x1200",
-            logo : "https://placehold.co/400x150",
-            name : "green",
-            phone : 111122233445566,
-            slogan : "will make your life tasty"
+    "aboutus": {
+      "description": "will make your life tasty will make your life tasty will make your life tasty will make your life tasty will make your life tasty will make your life tasty will make your life tasty will make your life tasty will make your life tasty will make your life tasty will make your life tasty will make your life tasty will make your life tasty will make your life tasty will make your life tasty will make your life tasty will make your life tasty will make your life tasty will make your life tasty will make your life tasty will make your life tasty will make your life tasty will make your life tasty will make your life tasty will make your life tasty will make your life tasty will make your life tasty will make your life tasty will make your life",
+      "slides": [
+        {
+          "color": "indigo",
+          "description": "description1",
+          "src": "https://placehold.co/600x600"
         },
-        aboutus : {
-            title       : null ,
-            subheading  : null ,
-            description : null ,
-            slides      : [ ]  ,
-        } ,
-        order : {
-            title       : "give us uo order"          ,
-            description : "will make your life tasty"
-        } ,
-        prodect : [ ]  ,
-        recipes : [ ]  ,
-    } ) ;
+        {
+          "color": "warning",
+          "description": "description2",
+          "src": "https://placehold.co/600x600"
+        },
+        {
+          "color": "pink darken-2",
+          "description": "description3",
+          "src": "https://placehold.co/600x600"
+        },
+        {
+          "color": "red lighten-1",
+          "description": "description4",
+          "src": "https://placehold.co/600x600"
+        },
+        {
+          "color": "red",
+          "description": "description5",
+          "src": "https://placehold.co/600x600"
+        }
+      ],
+      "subheading": "know your item and go to the next step",
+      "title": "About us"
+    },
+    "app_infos": {
+      "Copyright": "© Copyright 2020 Lorem Inc test. All rights reserved.",
+      "address": "https://www.google.com/maps",
+      "background": "https://placehold.co/1200x600",
+      "description": "test description test description test description test description test description test description test description test description test description test description test description test description test description test description test description test description test description test description test description test description",
+      "email": "email@email.com",
+      "facebook": "facebook.com",
+      "instagram": "instagram.com",
+      "logo": "https://placehold.co/400x150",
+      "name": "green",
+      "phone": 111122233445566,
+      "slogan": "will make your life tasty",
+      "twitter": "twitter.com"
+    },
+    "order": {
+      "description": "will make your life tasty",
+      "title": "give us uo order"
+    },
+    "prodect": [
+      {
+        "description": "description",
+        "src": "https://placehold.co/600x600",
+        "title": "squirrel"
+      },
+      {
+        "description": "description",
+        "src": "https://placehold.co/600x600",
+        "title": "sky"
+      },
+      {
+        "description": "description",
+        "src": "https://placehold.co/600x600",
+        "title": "bird"
+      },
+      {
+        "description": "description",
+        "src": "https://placehold.co/600x600",
+        "title": "planet"
+      },
+      {
+        "description": "https://cdn.vuetifyjs",
+        "src": "https://placehold.co/600x600",
+        "title": "planet"
+      },
+      {
+        "description": "https://cdn.vuetifyjs",
+        "src": "https://placehold.co/600x600",
+        "title": "planet"
+      }
+    ],
+    "recipes": [
+      {
+        "description": "test description test description test description test description test description test description test description test description test description test description test description test description test description test description test description test description test description test description test description test description",
+        "src": "https://placehold.co/600x600",
+        "title": "planet0"
+      },
+      {
+        "description": "test description test description test description test description test description test description test description test description test description test description test description test description test description test description test description test description test description test description test description test description",
+        "src": "https://placehold.co/600x600",
+        "title": "planet1"
+      },
+      {
+        "description": "test description test description test description test description test description test description test description test description test description test description test description test description test description test description test description test description test description test description test description test description",
+        "src": "https://placehold.co/600x600",
+        "title": "planet2"
+      }
+    ]
+  } ) ;
     onValue( Reference( Database , 'home' ) , ( snapshot ) => {
         home.value = snapshot.val( );
         console.log( home.value )
